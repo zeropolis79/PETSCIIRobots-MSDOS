@@ -1,0 +1,24 @@
+del audio.obj backgroundtasks.obj files.obj game.obj globals.obj interrupt.obj keyboard.obj string.obj main.obj memory.obj titlescreen.obj video.obj vga.obj cga.obj ega.obj etga.obj pcplus.obj hercules.obj robots.exe
+wcc -DSHAREWARE audio.c -0 -ml -zu -bt=dos -d0 -oneatx
+wcc -DSHAREWARE backgroundtasks.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE files.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE game.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE globals.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE interrupt.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE keyboard.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE string.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE main.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE memory.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE titlescreen.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE video.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE vga.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE cga.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE ega.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE etga.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE pcplus.c -0 -ml -bt=dos -d0 -oneatx
+wcc -DSHAREWARE hercules.c -0 -ml -bt=dos -d0 -oneatx
+wlink system dos name robots.exe file audio.obj, backgroundtasks.obj, files.obj, game.obj, globals.obj, interrupt.obj, keyboard.obj, string.obj, main.obj, memory.obj, titlescreen.obj, video.obj, vga.obj, cga.obj, ega.obj, etga.obj, pcplus.obj, hercules.obj
+
+
+:: wcl -0 -mc -zu -bcl=dos -d0 -oneatx -fe=robots.exe *.c
+:: wcl -0 -ml -bcl=dos -d0 -ox -fe=robots.exe *.c

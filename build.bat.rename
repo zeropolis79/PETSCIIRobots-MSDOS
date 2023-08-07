@@ -1,0 +1,24 @@
+del audio.obj backgroundtasks.obj files.obj game.obj globals.obj interrupt.obj keyboard.obj string.obj main.obj memory.obj titlescreen.obj video.obj vga.obj cga.obj ega.obj etga.obj pcplus.obj hercules.obj robots.exe
+wcc audio.c -0 -ml -zu -bt=dos -d0 -oneatx
+wcc backgroundtasks.c -0 -ml -bt=dos -d0 -oneatx
+wcc files.c -0 -ml -bt=dos -d0 -oneatx
+wcc game.c -0 -ml -bt=dos -d0 -oneatx
+wcc globals.c -0 -ml -bt=dos -d0 -oneatx
+wcc interrupt.c -0 -ml -bt=dos -d0 -oneatx
+wcc keyboard.c -0 -ml -bt=dos -d0 -oneatx
+wcc string.c -0 -ml -bt=dos -d0 -oneatx
+wcc main.c -0 -ml -bt=dos -d0 -oneatx
+wcc memory.c -0 -ml -bt=dos -d0 -oneatx
+wcc titlescreen.c -0 -ml -bt=dos -d0 -oneatx
+wcc video.c -0 -ml -bt=dos -d0 -oneatx
+wcc vga.c -0 -ml -bt=dos -d0 -oneatx
+wcc cga.c -0 -ml -bt=dos -d0 -oneatx
+wcc ega.c -0 -ml -bt=dos -d0 -oneatx
+wcc etga.c -0 -ml -bt=dos -d0 -oneatx
+wcc pcplus.c -0 -ml -bt=dos -d0 -oneatx
+wcc hercules.c -0 -ml -bt=dos -d0 -oneatx
+wlink system dos name robots.exe file audio.obj, backgroundtasks.obj, files.obj, game.obj, globals.obj, interrupt.obj, keyboard.obj, string.obj, main.obj, memory.obj, titlescreen.obj, video.obj, vga.obj, cga.obj, ega.obj, etga.obj, pcplus.obj, hercules.obj
+
+
+:: wcl -0 -mc -zu -bcl=dos -d0 -oneatx -fe=robots.exe *.c
+:: wcl -0 -ml -bcl=dos -d0 -ox -fe=robots.exe *.c
